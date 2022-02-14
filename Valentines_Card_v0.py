@@ -214,7 +214,7 @@ while card_open == "y":
                         print(f"\n\n\nGreat! You have:\n"
                         f"Received {total_hugs} HUGS\n"
                         f"Received {candy_count} out of {candy_secret_limit} Hi-Chews\n"
-                        f"Received 8 pairs of Victoria's Secret underwear\n"
+                        f"Received 8 new pairs of Victoria's Secret underwear\n"
                         f"Experienced {swing_count} mood-swing(s)\n"
                         f"And now you're feeling {cbee_mood}...\n"
                         f"You also love me and want me to play Apex Legends all day today... I'll turn on the PS4!\n"
