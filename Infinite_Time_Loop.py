@@ -18,7 +18,7 @@ while runstart <= datetime.now():
         loop_start = datetime.now()
         
         # Pause for random intervals
-        pausetime = random.uniform(0.0,0.99)**2
+        pausetime = random.uniform(0.0,0.99)**3
         time.sleep(pausetime)
 
         # Generate random numbers
@@ -33,9 +33,9 @@ while runstart <= datetime.now():
 
         # Print random output
         randomoutput = (
-                f">>cmd.prmpt/../f/input.csv time={loop_end} "
-                f"cdir ip/#!stamp c{loopcount}:{number*2:05d}:{number*1.1:.1f} "
-                f"p{totpausetime:.3f}/tot=<{tot_time}s>\n"
+                f">>cmd.prmpt/..st_time={loop_start} "
+                f"cdir ip/#!stamp c{loopcount}:{number*2:05d} // {totpausetime:.15f}\n"
+                f"  git.f~pull;time_end={loop_end}>./input.csv --p{int(number/10)}:{pausetime:.4f}/tot=<{tot_time}s>\n\n"
                 )
         print(randomoutput,end="")
         with open(outputfile,"a") as txt_file:
