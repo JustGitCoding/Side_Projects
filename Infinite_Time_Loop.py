@@ -25,7 +25,7 @@ def generate_key(length):
     return fullkey
 
 # Infinite loop
-while runstart <= datetime.now():
+while True:
     for i in range(1,2):
         loop_start = datetime.now()
         
