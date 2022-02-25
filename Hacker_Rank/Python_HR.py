@@ -86,23 +86,24 @@ print(runnerup)
 # Given the names and grades for each student in a class of n students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
 # Note: If there are multiple students with the second lowest grade, order their names alphabetically and print each name on a new line.
 
-import numpy as np
-
-n=3
+n=5
 data = []
-losers = []
-lowest = 100
+scorerange = []
+answer = []
 for i in range(n):
     name = input()
     score = float(input())
     data.append([name,score])
 
-for i in range(n):
-    if data[i][1] <= lowest:
-        lowest = data[i][1]
+for i in range(len(data)):
+    if data[i][1] not in scorerange:
+        scorerange.append(data[i][1])
+        scorerange = sorted(scorerange)
 
-for i in range(n):
-    if data[i][1] == lowest:
-        losers.append([data[i][0],data[i][1]])
+for i in range(len(data)):
+    if data[i][1] == scorerange[1]:
+        answer.append(data[i][0])
+answer = sorted(answer)
 
-print(sorted(losers))
+for k in range(len(answer)):
+    print(answer[k])
