@@ -85,7 +85,6 @@ print(runnerup)
 
 # Given the names and grades for each student in a class of n students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
 # Note: If there are multiple students with the second lowest grade, order their names alphabetically and print each name on a new line.
-
 n=5
 data = []
 scorerange = []
@@ -94,16 +93,23 @@ for i in range(n):
     name = input()
     score = float(input())
     data.append([name,score])
-
 for i in range(len(data)):
     if data[i][1] not in scorerange:
         scorerange.append(data[i][1])
         scorerange = sorted(scorerange)
-
 for i in range(len(data)):
     if data[i][1] == scorerange[1]:
         answer.append(data[i][0])
 answer = sorted(answer)
-
 for k in range(len(answer)):
     print(answer[k])
+
+# The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. 
+# Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+n = 5
+student_marks = {'alpha':[10,20,30],'beta':[20,10,15]}
+query_name = 'beta'
+stu_total = 0
+for i in student_marks[query_name]:
+    stu_total += i
+print(f'{stu_total / len(student_marks[query_name]):.2f}')
