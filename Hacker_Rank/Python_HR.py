@@ -113,3 +113,17 @@ stu_total = 0
 for i in student_marks[query_name]:
     stu_total += i
 print(f'{stu_total / len(student_marks[query_name]):.2f}')
+
+# start() & end()
+# You are given a string S.
+# Your task is to find the indices of the start and end of string k in S.
+import re
+string='aabbccddeeaaa'
+kstring='aa'
+pattern = re.compile(kstring)
+found = pattern.search(string)
+if not found:
+    print('(-1, -1)')
+while found:
+    print(f'({found.start()}, {found.end()-1})')
+    found = pattern.search(string, found.start()+1)
