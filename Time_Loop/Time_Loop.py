@@ -49,7 +49,7 @@ while True:
         # Print random output
         randomoutput = (
                 f">>cmd.prmpt/..st_time={loop_start} "
-                f"cdir ip/#!stamp c{loopcount}:{number*2:05d} // {totpausetime:.15f}\n"
+                f"cdir ip/#!stamp c{loopcount}:{number*2:05d} /{totpausetime:.15f}\n"
                 f"   [pw.{instance_key}] time={loop_end}>./input.csv --p{int(number/10)}:{pausetime:.4f}/tot=<{tot_time}s>\n\n"
                 )
         print(randomoutput,end="")
