@@ -6,6 +6,9 @@ cards = ['A ','2 ','3 ','4 ','5 ','6 ','7 ','8 ','9 ','10','J ','K ']
 suits = ['\u2660','\u2663','\u2665','\u2666']
 deck = [card+suit for suit in suits for card in cards]
 
+random.shuffle(deck)
+deck
+
 # Function to print cards on the table
 def summarize(deck, players, money, wagers, hits, final=False):
     # DEALER's CARDS
@@ -29,14 +32,16 @@ def summarize(deck, players, money, wagers, hits, final=False):
 
 # Function to give each player a turn
 def play(deck, dealt, hits, players):
-    hit = ''
     for player in range(players):
-        while hit not in ['stay', 's']:
+        hit = ''
+        while hit not in ['stay', 's']: ### --- need to end this loop once last player is done
             hit = input(f"Player {player+1} - Would you like to hit ('h') or stay ('s')?\n").lower()
             if hit in ['hit','h']:
                 dealt += 1
                 hits[player].append(dealt)
                 print(f'   Current hand:       {deck[player]}, {deck[player+players+1]}', end='')
+                #------- add something here
+                # -------------- print total for the player
                 for hit in hits[player]:
                     print(f', {deck[hit]}', end='')
         print('\n-------------------------------------------')
