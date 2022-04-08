@@ -6,7 +6,6 @@ cards = ['A ','2 ','3 ','4 ','5 ','6 ','7 ','8 ','9 ','10','J ','K ']
 suits = ['\u2660','\u2663','\u2665','\u2666']
 deck = [card+suit for suit in suits for card in cards]
 
-
 # Function to collect bets
 def collect_wagers(players, money, wagers):
     for player in range(players):
