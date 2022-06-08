@@ -87,7 +87,6 @@ while players == 0:
     money = [float(input(f'How much does Player {player+1} buy in for?\n')) for player in range(players)]
     wagers = [-1 for player in range(players)]
     
-
 # Keep playing as long as there is money on the table
 table_money = 0
 for m in money:
